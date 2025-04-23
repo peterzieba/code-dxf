@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "DXF – comments & SECTION folding (0‑line included)",
+  "scopeName": "source.dxf",
+  "fileTypes": ["dxf"],
+
+  "patterns": [
+    {
+      "name": "comment.line.dxf",
+      "match": "^[\\t ]*999\\b.*$"
+    }
+  ]
+
+
+}
