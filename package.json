@@ -1,0 +1,44 @@
+{
+  // ──────────────────────────────────────────────────────────────
+  //  DXF language configuration
+  //  - comments and SECTION folding only
+  // ──────────────────────────────────────────────────────────────
+
+  "comments": {
+    // VS Code inserts this string when you press Ctrl+/,
+    // and recognises any line that begins with it as a comment.
+    "lineComment": "999"
+  },
+
+  /*  No automatic bracket or quote pairing is useful for raw DXF   */
+  "brackets": [],
+  "autoClosingPairs": [],
+  "surroundingPairs": [],
+
+  /*  Folding rules                                                 */
+  "folding": {
+    // Turn OFF “indentation” folding so we only see SECTION folds
+    "offSide": false,
+
+    "markers": {
+      // Start folding at any line that contains SECTION
+      "start": "^[\\t ]*SECTION\\b",
+      // …and stop when we reach ENDSEC
+      "end":   "^[\\t ]*ENDSEC\\b"
+
+      //"start": "^[\\t ]*0\\s*$\\n?(?=[\\t ]*SECTION\\b)",
+      //"end":   "^[\\t ]*ENDSEC\\b"
+    }
+  }
+
+
+/*
+"foldingStartMarker": "^[\\t ]*0\\s*$\\n?(?=[\\t ]*SECTION\\b)",
+"foldingStopMarker":  "^[\\t ]*ENDSEC\\b",
+*/
+
+/*
+"foldingStartMarker": "^(0)\\s*$\\n\\s*SECTION\\b",
+"foldingStopMarker":  "^(0)\\s*$\\n\\s*ENDSEC\\b"
+*/
+}
