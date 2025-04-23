@@ -6,10 +6,13 @@
 
   "patterns": [
     {
-      "name": "comment.line.dxf",
-      "match": "^[\\t ]*999\\b.*$"
+      "name": "comment.block.dxf",
+      "begin": "^[\\t ]*999\\b.*$",
+      "end": "^(?![\\t ]*999\\b).*$",
+      "patterns": []
     }
   ]
+
 
 
 }
